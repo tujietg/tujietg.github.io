@@ -34,62 +34,6 @@
 
     
     
-    
-        <script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        
-            load: ['[tex]/mhchem'],
-        
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        
-            packages: {'[+]': ['mhchem']},
-        
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
           
 
     
@@ -97,8 +41,8 @@
     
     
     <title>
-          
-            Hexo
+        
+            程序，进程，线程那些屁事 | Hexo
         
     </title>
     
@@ -169,9 +113,12 @@
     </v-list>
     <v-divider></v-divider>
     
-        <v-list id="sub-menu" class="font-weight-medium" dense>
-            
-        </v-list>    
+        <div class="post-toc">
+            <a href="/2021/01/15/%E7%A8%8B%E5%BA%8F%EF%BC%8C%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%E9%82%A3%E4%BA%9B%E5%B1%81%E4%BA%8B/" class="toc-header">Table of Contents</a>
+            <div class="toc-content">
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#dasd-%E7%88%B1%E4%B8%8Ad"><span class="toc-number">1.</span> <span class="toc-text">dasd 爱上d</span></a></li></ol>
+            </div>
+        </div>
     
 
     <div id="footer">
@@ -272,85 +219,67 @@
   </v-col>
 </v-row>
 
-                            <v-card class="elevation-2 index-card">
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2021-01-15
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-          </v-col>
-        </v-row>
-        <span>
+                            <v-card class="elevation-2 post-card">
+    
+    
+        <div class="post-header">
+  <a class="post-header-title font-weight-medium" href="/2021/01/15/%E7%A8%8B%E5%BA%8F%EF%BC%8C%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%E9%82%A3%E4%BA%9B%E5%B1%81%E4%BA%8B/">程序，进程，线程那些屁事</a>
+  <div class="post-header-meta">   
+    <span>
+      <v-icon color="">event</v-icon>
+      Posted on:&nbsp;2021-01-15
+    </span>
+    <span>
+      <v-icon color="">event_available</v-icon>
+      Edited on:&nbsp;2021-01-15
+    </span>
+    <span>
+      <v-icon color="">folder</v-icon>
+      In:&nbsp;Uncategorized
+    </span>
+    
+    <span>
+      <v-icon color="">visibility</v-icon>
+      Views:&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+    </span>
+    
+  </div>
+</div>
+
+    
+    
+    
+    
+    <div class="post-content typo">
+        <h3 id="dasd-爱上d"><a href="#dasd-爱上d" class="headerlink" title="dasd 爱上d"></a>dasd 爱上d</h3><p>asdasd</p>
+<p>asd</p>
+<p>asdsfd</p>
+
+    </div>
+    <!--文末结束语-->
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;"> --- 本文结束 <i class="fas fa-heart"></i> The End --- </div>
+    
+    <!--页脚广告-->
+    
+    <v-divider></v-divider>
+    
+    <div class="post-nav">             
+              
           
-            <a class="index-article-header-category font-weight-bold" href="/2021/01/15/%E7%A8%8B%E5%BA%8F%EF%BC%8C%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%E9%82%A3%E4%BA%9B%E5%B1%81%E4%BA%8B/">Uncategorized></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2021/01/15/%E7%A8%8B%E5%BA%8F%EF%BC%8C%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%E9%82%A3%E4%BA%9B%E5%B1%81%E4%BA%8B/">程序，进程，线程那些屁事</a>
-      </div>
-      
-      <div class="index-article-content">
+            <div class="post-nav-button float-right">
+                <a class="font-weight-bold text-right" href="/2021/01/15/hello-world/">      
+                    Hello World
+                </a>
+                <v-icon>chevron_right</v-icon>
+            </div>
         
-          dasd 爱上dasdasd
-asd
-asdsfd
+    </div>
+</v-card>
+
+
 
         
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2021/01/15/%E7%A8%8B%E5%BA%8F%EF%BC%8C%E8%BF%9B%E7%A8%8B%EF%BC%8C%E7%BA%BF%E7%A8%8B%E9%82%A3%E4%BA%9B%E5%B1%81%E4%BA%8B/">Read More</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2021-01-15
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/2021/01/15/hello-world/">Uncategorized></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/2021/01/15/hello-world/">Hello World</a>
-      </div>
-      
-      <div class="index-article-content">
-        
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
-More info: Writing
-Run server1$ hexo s...
-        
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/2021/01/15/hello-world/">Read More</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-   
-</v-card>  
-
-         
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">
@@ -379,6 +308,12 @@ Run server1$ hexo s...
 
 
 
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.8/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({
+        startOnLoad: true,
+        theme: "default"
+    });</script>
 
 
 
